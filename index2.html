@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatenda Ephraim Chipwanya | Cloud & DevOps Engineer</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            600: '#4f46e5', // Indigo-600
+                            700: '#4338ca', // Indigo-700
+                            900: '#312e81', // Indigo-900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary-100 selection:text-primary-900">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-slate-900 tracking-tight">Ephraim<span class="text-primary-600">.Dev</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">About</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Experience</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Projects</a>
+                    <a href="#skills" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">Skills</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-full hover:bg-primary-700 transition shadow-lg shadow-primary-600/30">Contact Me</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <svg class="h-full w-full text-slate-200" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="text-center lg:text-left animate-fade-in-up">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary-100 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wide mb-6">
+                        <i class="fas fa-certificate mr-2"></i> AWS Certified Cloud Practitioner
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Building Resilient <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-purple-600">Cloud Infrastructure</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        I am a dynamic developer with a unique background in <span class="font-semibold text-slate-900">Computer Science & Finance</span>. Currently pursuing an Master of Science in IT(Software Engineering) at CMU Africa, specializing in DevOps, Azure, and .NET Core solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            View Projects
+                        </a>
+                        <a href="https://github.com/tatendaephraim" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 transition">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/tatenda-ephraim-chipwanya-bba050146/" target="_blank" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 transition">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative lg:h-full flex justify-center lg:justify-end">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                        <div class="absolute top-0 -right-4 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                        
+                        <img 
+                            src="./assets/images/profile.jpg" 
+                            onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Ephraim+Chipwanya&background=4f46e5&color=fff&size=512';"
+                            alt="Tatenda Ephraim Chipwanya" 
+                            class="relative w-full h-full object-cover object-top rounded-2xl shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+                <p class="mt-4 text-slate-600">Bridging the gap between Network Engineering and Software Development.</p>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 ml-4 md:ml-12 space-y-12">
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-primary-600 group-hover:scale-125 transition"></div>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                        <h3 class="text-xl font-bold text-slate-900">Network Engineer & Web Developer Intern</h3>
+                        <span class="text-sm font-medium text-primary-600 bg-primary-50 px-3 py-1 rounded-full">Aug 2020 - Nov 2024</span>
+                    </div>
+                    <h4 class="text-lg text-slate-700 font-medium mb-4">Government Internet Service Provider (GISP) | Harare, Zimbabwe</h4>
+                    <ul class="list-disc list-outside ml-5 text-slate-600 space-y-2">
+                        <li>Configured and installed network infrastructure including rack setup, wiring, and router connections.</li>
+                        <li>Resolved complex Local Area Network (LAN) connectivity issues and monitored network reliability.</li>
+                        <li>Customized WordPress themes and plugins for government websites (e.g., Zimbabwe New Delhi Embassy).</li>
+                        <li>Performed routine maintenance and cross-browser functionality testing.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Featured Projects</h2>
+                    <p class="mt-4 text-slate-600">Technical implementations in Cloud, DevOps, and Web.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-slate-100 flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Aug 2025 - Oct 2025</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Cloud-Native E-Commerce Infrastructure</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3">
+                            Architected a resilient Azure infrastructure to handle high-traffic flash sales. Implemented a replicated MySQL cluster with StatefulSets and configured Horizontal Pod Autoscaling (HPA) for zero downtime.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">Azure AKS</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">Docker Swarm</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden border border-slate-100 flex flex-col h-full">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-indigo-100 rounded-lg">
+                                <i class="fab fa-wordpress text-indigo-600 text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2020 - 2024</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Gov. Web Infrastructure & Security</h3>
+                        <p class="text-slate-600 mb-6">
+                            Managed and optimized government web portals. Focused on plugin configuration, theme customization for responsive design, and routine troubleshooting to ensure 99.9% uptime for public services.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">WordPress</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">Network Security</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-semibold">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical Arsenal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-primary-500 transition">
+                    <h3 class="text-xl font-bold text-primary-400 mb-6 flex items-center">
+                        <i class="fas fa-code mr-3"></i> Languages & Web
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag">.Net Core</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">MVC</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-primary-500 transition">
+                    <h3 class="text-xl font-bold text-primary-400 mb-6 flex items-center">
+                        <i class="fas fa-server mr-3"></i> Cloud & DevOps
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag">Azure Services</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-primary-500 transition">
+                    <h3 class="text-xl font-bold text-primary-400 mb-6 flex items-center">
+                        <i class="fas fa-database mr-3"></i> Data & Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MSSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Azure SQL Ledger</span>
+                        <span class="skill-tag">PowerBI</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <div class="space-y-8">
+                    <h3 class="text-xl font-semibold text-slate-700 border-b pb-2">Academic Background</h3>
+                    
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600 font-bold">
+                                MS
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">Master of Science, Information Technology</h4>
+                            <p class="text-primary-600">Carnegie Mellon University, Africa</p>
+                            <p class="text-sm text-slate-500">Expected May 2027</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 font-bold">
+                                BS
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">B.Sc. (Hons) Computer Science</h4>
+                            <p class="text-slate-600">National University of Science and Technology, Zimbabwe</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 font-bold">
+                                BCom
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900">Bachelor of Commerce in Finance</h4>
+                            <p class="text-slate-600">University of Johannesburg, South Africa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-slate-700 border-b pb-2">Certifications</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 shadow-sm">
+                            <i class="fab fa-aws text-orange-500 text-2xl mr-4"></i>
+                            <div>
+                                <span class="block font-bold text-slate-800">AWS Certified Cloud Practitioner</span>
+                                <span class="text-sm text-slate-500">Valid until 2027</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 shadow-sm">
+                            <i class="fab fa-microsoft text-blue-500 text-2xl mr-4"></i>
+                            <div>
+                                <span class="block font-bold text-slate-800">Microsoft Learn Student Ambassador</span>
+                                <span class="text-sm text-slate-500">2021-2024</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100 shadow-sm">
+                            <i class="fab fa-python text-yellow-500 text-2xl mr-4"></i>
+                            <div>
+                                <span class="block font-bold text-slate-800">Python Essentials 1</span>
+                                <span class="text-sm text-slate-500">CISCO Networking Academy</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-primary-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-primary-800 opacity-50 blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-6">Let's Build Something Great</h2>
+            <p class="text-primary-100 text-lg mb-12">
+                Open to opportunities in Cloud Engineering, DevOps, and Full Stack Development.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:tchipwan@andrew.cmu.edu" class="flex items-center justify-center px-8 py-4 bg-white text-primary-900 rounded-lg font-bold hover:bg-slate-100 transition shadow-lg">
+                    <i class="fas fa-envelope mr-3"></i> tchipwan@andrew.cmu.edu
+                </a>
+                <a href="tel:+250793145901" class="flex items-center justify-center px-8 py-4 border border-primary-400 text-white rounded-lg font-bold hover:bg-primary-800 transition">
+                    <i class="fas fa-phone mr-3"></i> (+250) 793 145 901
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-8">
+                <a href="https://github.com/tatendaephraim" class="text-primary-200 hover:text-white transition text-3xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tatenda-ephraim-chipwanya-bba050146/" class="text-primary-200 hover:text-white transition text-3xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/TChipwanya" class="text-primary-200 hover:text-white transition text-3xl"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <p class="mt-12 text-primary-400 text-sm">&copy; 2025 Tatenda Ephraim Chipwanya. All rights reserved.</p>
+        </div>
+    </section>
+
+    <style>
+        .skill-tag {
+            background-color: #334155; /* slate-700 */
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            cursor: default;
+        }
+        .skill-tag:hover {
+            background-color: #4f46e5; /* primary-600 */
+            transform: translateY(-2px);
+        }
+    </style>
+</body>
+</html>
