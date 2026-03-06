@@ -18,20 +18,23 @@
                     },
                     colors: {
                         primary: { 
-                            50: '#f0f9ff', 
-                            100: '#e0f2fe', 
-                            400: '#38bdf8',
-                            500: '#0ea5e9', 
-                            600: '#0284c7', 
-                            700: '#0369a1', 
-                            800: '#075985',
-                            900: '#0c4a6e' 
+                            50: '#fef9f3', 
+                            100: '#fce8d6', 
+                            400: '#f97316',
+                            500: '#ea580c', 
+                            600: '#c2410c', 
+                            700: '#9a360a', 
+                            800: '#731c08',
+                            900: '#4a0f05' 
                         },
                         accent: { 
-                            400: '#34d399',
-                            500: '#10b981', 
-                            600: '#059669', 
-                            700: '#047857' 
+                            400: '#22c55e',
+                            500: '#16a34a', 
+                            600: '#15803d', 
+                            700: '#166534' 
+                        },
+                        secondary: {
+                            600: '#6366f1'
                         }
                     },
                     animation: { 
@@ -55,8 +58,8 @@
                             '100%': { opacity: '1' }
                         },
                         glow: {
-                            '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)' },
-                            '100%': { boxShadow: '0 0 40px rgba(14, 165, 233, 0.8)' }
+                            '0%': { boxShadow: '0 0 20px rgba(249, 115, 22, 0.5)' },
+                            '100%': { boxShadow: '0 0 40px rgba(249, 115, 22, 0.8)' }
                         },
                         gradient: {
                             '0%, 100%': { backgroundPosition: '0% 50%' },
@@ -73,13 +76,36 @@
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased overflow-x-hidden">
     
+    <style>
+        .tech-badge {
+            @apply px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 text-xs font-medium rounded-full hover:border-primary-500/50 transition-colors;
+        }
+        .nav-link {
+            @apply text-slate-300 hover:text-primary-400 transition-colors duration-300 font-medium;
+        }
+        .social-icon {
+            @apply w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-slate-300 hover:border-primary-500 hover:text-primary-400 hover:shadow-lg hover:shadow-primary-500/20 transition-all duration-300;
+        }
+        .feature-card {
+            @apply group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-800/50 hover:border-primary-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10;
+        }
+        .mobile-link {
+            @apply text-slate-300 hover:text-primary-400 transition-colors;
+        }
+        .gradient-text {
+            @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
+        }
+    </style>
+
+    <!-- Animated Background -->
     <div class="fixed inset-0 z-0 pointer-events-none">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
         <div class="absolute top-0 -left-40 w-80 h-80 bg-primary-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float"></div>
         <div class="absolute top-0 -right-40 w-80 h-80 bg-accent-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute -bottom-40 left-1/2 w-80 h-80 bg-purple-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 4s;"></div>
+        <div class="absolute -bottom-40 left-1/2 w-80 h-80 bg-secondary-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 4s;"></div>
     </div>
 
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -103,6 +129,7 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-[60] md:hidden">
         <div class="flex flex-col h-full p-8">
             <button id="close-menu" class="self-end text-3xl text-slate-300 hover:text-primary-400 mb-12">
@@ -119,7 +146,8 @@
         </div>
     </div>
 
-    <section id="about" class="relative min-h-screen flex items-center pt-24 pb-20 px-6">
+    <!-- Hero Section -->
+    <section id="about" class="relative min-h-screen flex items-center pt-32 pb-20 px-6">
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8 animate-slide-up">
@@ -249,86 +277,243 @@
                 <p class="text-xl text-slate-400">Real-world impact across mobile, cloud, and government systems</p>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8">
-                
-                <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2">
-                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <div class="relative aspect-video bg-gradient-to-br from-emerald-500/20 to-green-500/20 overflow-hidden">
-                        <img src="./assets/images/dash.png" alt="Poultry App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+            <!-- Featured Poultry Farm Project -->
+            <div class="mb-16 group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-slate-800/50 hover:border-primary-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20">
+                <div class="grid lg:grid-cols-2 gap-8 p-8 md:p-12 items-center">
+                    <!-- Project Image -->
+                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-slate-700/50">
+                        <img src="./assets/images/POULTRY%20FARM.png" alt="Poultry Farm Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
                         <div class="absolute top-4 right-4 px-3 py-1.5 bg-emerald-500/20 backdrop-blur-sm border border-emerald-500/30 text-emerald-400 text-xs font-bold rounded-full">
-                            Mobile App
+                            Featured Mobile App
                         </div>
                     </div>
-                    
-                    <div class="relative p-8 space-y-4">
-                        <h3 class="text-2xl font-display font-bold text-slate-100 group-hover:text-primary-400 transition-colors">Poultry Farm Management</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            Comprehensive Android app helping farmers track batches, finances, vaccinations, and sales with offline-first architecture and Firebase sync.
+
+                    <!-- Project Details -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-slate-100 mb-2">Poultry Farm Management System</h3>
+                            <p class="text-primary-400 font-semibold text-lg">Complete Professional Solution for Modern Farmers</p>
+                        </div>
+
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            A comprehensive Android application designed to digitize poultry farm operations. Manage batches, track inventory, record sales, monitor finances, and access real-time analytics—all from one intuitive platform.
                         </p>
-                        
+
+                        <!-- Key Features -->
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-bold text-slate-100">📊 Core Features:</h4>
+                            <div class="grid grid-cols-1 gap-2 text-slate-300">
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-accent-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Smart Dashboard:</strong> Real-time insights, live mortality tracking, weight performance monitoring</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-accent-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Batch Management:</strong> Track from day 1 to market, monitor growth cycles, record vaccinations</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-accent-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Inventory Control:</strong> Synchronized KG & Unit tracking, live bird counts, automatic stock updates</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-accent-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Financial Tracking:</strong> Sales & expense recording, profitability per batch, multi-currency</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-accent-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Analytics & Alerts:</strong> FCR calculation, growth monitoring, smart notifications</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack -->
                         <div class="flex flex-wrap gap-2 pt-2">
                             <span class="tech-badge">Kotlin</span>
                             <span class="tech-badge">Jetpack Compose</span>
                             <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Offline-First</span>
+                            <span class="tech-badge">Real-time Sync</span>
                         </div>
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.crescotech.poultryfarm" target="_blank" 
-                           class="inline-flex items-center gap-2 text-primary-400 font-semibold hover:text-primary-300 transition-colors group/link pt-4">
+
+                        <!-- CTA -->
+                        <a href="https://play.google.com/store/apps/details?id=com.crescotech.poultryfarm&hl=en-US&ah=EPqx3PnoimFutP-C9yqWe0XT6cI" target="_blank" 
+                           class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105 group/link">
                             <i class="fab fa-google-play"></i>
-                            View on Play Store
+                            Download on Play Store
                             <i class="fas fa-arrow-right text-sm group-hover/link:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
                 </div>
+            </div>
 
+            <!-- Featured Driver Ultimate Project -->
+            <div class="mb-16 group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-3xl overflow-hidden border border-slate-800/50 hover:border-red-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-red-500/20">
+                <div class="grid lg:grid-cols-2 gap-8 p-8 md:p-12 items-center">
+                    <!-- Project Image -->
+                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-slate-700/50 order-2 lg:order-1">
+                        <img src="./assets/images/DRIVER%20ULTIMATE.png" alt="Driver Ultimate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                        <div class="absolute top-4 right-4 px-3 py-1.5 bg-red-500/20 backdrop-blur-sm border border-red-500/30 text-red-400 text-xs font-bold rounded-full">
+                            Featured Education App
+                        </div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <div>
+                            <h3 class="text-3xl md:text-4xl font-display font-bold text-slate-100 mb-2">Driver Ultimate</h3>
+                            <p class="text-red-400 font-semibold text-lg">VID Practice Platform with AI Study Partner</p>
+                        </div>
+
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            A comprehensive VID (Vehicle Inspection & Driving) practice platform designed to help learners pass their driving tests on the first attempt. Features 650+ exam questions, AI-powered tutoring, and gamified learning.
+                        </p>
+
+                        <!-- Key Features -->
+                        <div class="space-y-3">
+                            <h4 class="text-lg font-bold text-slate-100">📚 Core Features:</h4>
+                            <div class="grid grid-cols-1 gap-2 text-slate-300">
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>650+ Mock Exams:</strong> Practice tests mirroring real exam conditions with instant feedback</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>AI Study Tutor:</strong> Adaptive learning system that adjusts difficulty based on performance</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Road Signs Module:</strong> 350+ interactive road signs, vehicle controls & defensive driving</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Gamified Progress:</strong> Streaks, badges, and points for motivation and engagement</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Nearby Schools Finder:</strong> GPS-enabled school locator with WhatsApp integration</span>
+                                </div>
+                                <div class="flex gap-3 items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 flex-shrink-0"></i>
+                                    <span><strong>Offline Support:</strong> Study anywhere with offline functionality and local data sync</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Why Choose -->
+                        <div class="space-y-3 pt-2 border-t border-slate-700">
+                            <h4 class="text-lg font-bold text-slate-100">✨ Why Driver Ultimate?</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                More than memorization - Randomized questions ensure true understanding. Everything in one app with real-world defensive driving focus. Proven results with thousands of first-time pass rates.
+                            </p>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="tech-badge">Mobile-First</span>
+                            <span class="tech-badge">AI Integration</span>
+                            <span class="tech-badge">Offline Support</span>
+                            <span class="tech-badge">GPS Integration</span>
+                        </div>
+
+                        <!-- CTA -->
+                        <p class="text-red-300 font-semibold text-sm">
+                            🎯 PASS YOUR VID TEST ON FIRST TRY!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Projects Grid -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                
                 <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
-                    <div class="relative aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-cloud text-8xl text-blue-400/30 group-hover:text-blue-400/50 transition-colors duration-700"></i>
+                    <div class="relative aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/20 overflow-hidden">
+                        <img src="./assets/images/slims.png" alt="Science Lab Manager SLIMS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
                         <div class="absolute top-4 right-4 px-3 py-1.5 bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 text-blue-400 text-xs font-bold rounded-full">
+                            Lab Management
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-8 space-y-4">
+                        <h3 class="text-2xl font-display font-bold text-slate-100 group-hover:text-primary-400 transition-colors">Science Lab Manager (SLIMS)</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Laboratory information management system for educational institutions. Digitizes inventory workflows with real-time cloud sync and hazardous material tracking.
+                        </p>
+                        
+                        <div class="text-xs text-slate-300 space-y-1">
+                            <p><strong>Key Features:</strong> Dynamic inventory engine, condition monitoring, data analytics</p>
+                            <p><strong>Tech:</strong> Kotlin, Jetpack Compose, Firebase Firestore, MVVM</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="tech-badge">Kotlin</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="relative aspect-video bg-gradient-to-br from-indigo-500/20 to-purple-500/20 overflow-hidden">
+                        <img src="./assets/images/precisionfleet.png" alt="Precision Fleet ERP" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                        <div class="absolute top-4 right-4 px-3 py-1.5 bg-indigo-500/20 backdrop-blur-sm border border-indigo-500/30 text-indigo-400 text-xs font-bold rounded-full">
+                            Enterprise ERP
+                        </div>
+                    </div>
+                    
+                    <div class="relative p-8 space-y-4">
+                        <h3 class="text-2xl font-display font-bold text-slate-100 group-hover:text-primary-400 transition-colors">Precision Fleet ERP</h3>
+                        <p class="text-slate-400 leading-relaxed text-sm">
+                            Enterprise asset intelligence for heavy machinery. Transform fleet operations from reactive to proactive with intelligent maintenance and financial analytics.
+                        </p>
+                        
+                        <div class="text-xs text-slate-300 space-y-1">
+                            <p><strong>Key Features:</strong> Intelligent maintenance ticketing, role-based dashboards, NBV calculations</p>
+                            <p><strong>Tech:</strong> Flutter, Firebase, TensorFlow (planned)</p>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Enterprise</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="relative aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden">
+                        <i class="fas fa-cloud text-8xl text-blue-400/30 group-hover:text-blue-400/50 transition-colors duration-700"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+                        <div class="absolute top-4 right-4 px-3 py-1.5 bg-cyan-500/20 backdrop-blur-sm border border-cyan-500/30 text-cyan-400 text-xs font-bold rounded-full">
                             Cloud/DevOps
                         </div>
                     </div>
                     
                     <div class="relative p-8 space-y-4">
                         <h3 class="text-2xl font-display font-bold text-slate-100 group-hover:text-primary-400 transition-colors">Cloud-Native E-Commerce</h3>
-                        <p class="text-slate-400 leading-relaxed">
+                        <p class="text-slate-400 leading-relaxed text-sm">
                             Resilient Azure infrastructure for high-traffic flash sales with MySQL clusters, auto-scaling, and zero-downtime deployment strategies.
                         </p>
+                        
+                        <div class="text-xs text-slate-300 space-y-1">
+                            <p><strong>Focus:</strong> Cloud infrastructure, Kubernetes orchestration, IaC</p>
+                            <p><strong>Tech:</strong> Azure AKS, Kubernetes, Terraform</p>
+                        </div>
                         
                         <div class="flex flex-wrap gap-2 pt-2">
                             <span class="tech-badge">Azure AKS</span>
                             <span class="tech-badge">Kubernetes</span>
                             <span class="tech-badge">Terraform</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-800/50 hover:border-slate-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 hover:-translate-y-2">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <div class="relative aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-shield-alt text-8xl text-purple-400/30 group-hover:text-purple-400/50 transition-colors duration-700"></i>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-                        <div class="absolute top-4 right-4 px-3 py-1.5 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 text-purple-400 text-xs font-bold rounded-full">
-                            Web Security
-                        </div>
-                    </div>
-                    
-                    <div class="relative p-8 space-y-4">
-                        <h3 class="text-2xl font-display font-bold text-slate-100 group-hover:text-primary-400 transition-colors">Government Web Infrastructure</h3>
-                        <p class="text-slate-400 leading-relaxed">
-                            Managed and secured high-traffic government portals with custom WordPress solutions, network hardening, and compliance standards.
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="tech-badge">WordPress</span>
-                            <span class="tech-badge">Security</span>
-                            <span class="tech-badge">PHP</span>
                         </div>
                     </div>
                 </div>
