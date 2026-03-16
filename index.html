@@ -18,14 +18,14 @@
                     },
                     colors: {
                         primary: { 
-                            50: '#eef2ff', 
-                            100: '#e0e7ff', 
-                            400: '#818cf8',
-                            500: '#6366f1', 
-                            600: '#4f46e5', 
-                            700: '#4338ca', 
-                            800: '#3730a3',
-                            900: '#312e81' 
+                            50: '#fef9f3', 
+                            100: '#fce8d6', 
+                            400: '#f97316',
+                            500: '#ea580c', 
+                            600: '#c2410c', 
+                            700: '#9a360a', 
+                            800: '#731c08',
+                            900: '#4a0f05' 
                         },
                         accent: { 
                             400: '#22c55e',
@@ -58,8 +58,8 @@
                             '100%': { opacity: '1' }
                         },
                         glow: {
-                            '0%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.5)' },
-                            '100%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.8)' }
+                            '0%': { boxShadow: '0 0 20px rgba(249, 115, 22, 0.5)' },
+                            '100%': { boxShadow: '0 0 40px rgba(249, 115, 22, 0.8)' }
                         },
                         gradient: {
                             '0%, 100%': { backgroundPosition: '0% 50%' },
@@ -100,9 +100,9 @@
     <!-- Animated Background -->
     <div class="fixed inset-0 z-0 pointer-events-none">
         <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
-        <div class="absolute top-0 -left-40 w-80 h-80 bg-indigo-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float"></div>
+        <div class="absolute top-0 -left-40 w-80 h-80 bg-primary-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float"></div>
         <div class="absolute top-0 -right-40 w-80 h-80 bg-accent-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 2s;"></div>
-        <div class="absolute -bottom-40 left-1/2 w-80 h-80 bg-blue-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 4s;"></div>
+        <div class="absolute -bottom-40 left-1/2 w-80 h-80 bg-secondary-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" style="animation-delay: 4s;"></div>
     </div>
 
     <!-- Navigation -->
@@ -207,6 +207,194 @@
             </div>
         </div>
     </section>
+
+        <!-- ParkSmart ZW Project Section (Infused & Tailwind Enhanced) -->
+        <section id="parksmart-gps-challenge" class="relative py-20 px-2 sm:px-4 md:px-8 w-full">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl shadow-xl p-4 md:p-8 lg:p-12 w-full">
+                <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-start md:items-center mb-8">
+                    <div class="flex-shrink-0 w-14 h-14 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 text-2xl font-bold shadow-lg">TEC</div>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-100 mb-1">Meet Ephraim</h2>
+                        <p class="text-sm md:text-base text-slate-400">Software developer & entrepreneur — building locally-relevant mobile products for the Zimbabwean market. Currently engineering <span class="font-semibold text-primary-400">ParkSmart ZW</span> and <span class="font-semibold text-accent-400">Ultimate Driver Zimbabwe</span>.</p>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs font-semibold rounded-full border border-blue-700/40">Flutter / Dart</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs font-semibold rounded-full border border-blue-700/40">Firebase</span>
+                            <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-semibold rounded-full border border-slate-700/40">C++ Systems</span>
+                            <span class="px-3 py-1 bg-green-900/20 text-green-400 text-xs font-semibold rounded-full border border-green-700/40">Mobile Product</span>
+                            <span class="px-3 py-1 bg-amber-900/20 text-amber-400 text-xs font-semibold rounded-full border border-amber-700/40">EcoCash Integration</span>
+                            <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-semibold rounded-full border border-slate-700/40">TFLite / ML</span>
+                            <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-semibold rounded-full border border-slate-700/40">Harare, ZW</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div class="flex flex-wrap gap-2 bg-slate-800/60 rounded-lg p-2 mb-4">
+                        <button class="tab flex-1 py-2 px-1 sm:px-2 rounded-lg text-base sm:text-lg font-display font-semibold tracking-tight text-slate-300 hover:text-primary-400 transition-all duration-150 focus:outline-none active bg-slate-900/80" onclick="switchTab('gps')">GPS Challenge</button>
+                        <button class="tab flex-1 py-2 px-1 sm:px-2 rounded-lg text-base sm:text-lg font-display font-semibold tracking-tight text-slate-300 hover:text-primary-400 transition-all duration-150 focus:outline-none bg-slate-900/80" onclick="switchTab('solutions')">Solutions</button>
+                        <button class="tab flex-1 py-2 px-1 sm:px-2 rounded-lg text-base sm:text-lg font-display font-semibold tracking-tight text-slate-300 hover:text-primary-400 transition-all duration-150 focus:outline-none bg-slate-900/80" onclick="switchTab('skills')">Skills</button>
+                        <button class="tab flex-1 py-2 px-1 sm:px-2 rounded-lg text-base sm:text-lg font-display font-semibold tracking-tight text-slate-300 hover:text-primary-400 transition-all duration-150 focus:outline-none bg-slate-900/80" onclick="switchTab('profile')">Employer Brief</button>
+                    </div>
+
+                    <div id="tab-gps" class="panel active">
+                        <div class="text-sm sm:text-base font-bold uppercase tracking-wider text-primary-400 mb-3 font-display">Risk register — GPS accuracy</div>
+                        <div class="grid grid-cols-3 gap-2 text-xs sm:text-sm font-semibold text-slate-400 mb-2 font-sans">
+                            <span>Risk</span><span>Severity</span><span>Mitigation</span>
+                        </div>
+                        <div class="divide-y divide-slate-800">
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">False bay boundary confidence</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-red-900/30 text-red-400">High</span><span class="text-slate-400 font-sans">Manual alignment step before polygon save</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">User towed despite app confirmation</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-red-900/30 text-red-400">High</span><span class="text-slate-400 font-sans">Prominent disclaimer + ToS waiver</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">Polygon overlaps adjacent bay</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-red-900/30 text-red-400">High</span><span class="text-slate-400 font-sans">Min size validation + overlap detection</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">GPS drift during active session</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-amber-900/30 text-amber-400">Medium</span><span class="text-slate-400 font-sans">Poll every 10s; alert on &gt;3m drift</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">Poor accuracy in parking structures</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-amber-900/30 text-amber-400">Medium</span><span class="text-slate-400 font-sans">HDOP &gt; 3 → disable polygon features</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 py-2 items-center">
+                                <span class="text-slate-100 font-medium font-display">RTK unavailability on consumer devices</span><span class="inline-flex items-center justify-center px-2 py-1 rounded-full text-xs sm:text-sm font-bold bg-green-900/30 text-green-400">Low</span><span class="text-slate-400 font-sans">Document as future phase; no MVP dependency</span>
+                            </div>
+                        </div>
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary-400 mt-6 mb-2 font-display">GPS accuracy by condition</div>
+                        <div class="text-xs sm:text-sm text-slate-400 mb-2 font-sans">Parking bay = 2.5m wide. Error bars represent observed urban range.</div>
+                        <div class="overflow-x-auto rounded-2xl bg-slate-800/60 p-4 border border-slate-700">
+                            <svg width="100%" viewBox="0 0 600 180" class="block">
+                                <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+                                <line x1="160" y1="10" x2="160" y2="160" stroke="#334155" stroke-width="0.5"/>
+                                <line x1="160" y1="160" x2="590" y2="160" stroke="#334155" stroke-width="0.5"/>
+                                <text x="155" y="165" text-anchor="end" class="fill-slate-400 text-xs font-sans">0m</text>
+                                <text x="155" y="119" text-anchor="end" class="fill-slate-400 text-xs font-sans">10m</text>
+                                <text x="155" y="76"  text-anchor="end" class="fill-slate-400 text-xs font-sans">20m</text>
+                                <text x="155" y="33"  text-anchor="end" class="fill-slate-400 text-xs font-sans">30m</text>
+                                <line x1="156" y1="119" x2="590" y2="119" stroke="#475569" stroke-width="0.5" stroke-dasharray="3 4"/>
+                                <line x1="156" y1="76"  x2="590" y2="76"  stroke="#475569" stroke-width="0.5" stroke-dasharray="3 4"/>
+                                <line x1="156" y1="33"  x2="590" y2="33"  stroke="#475569" stroke-width="0.5" stroke-dasharray="3 4"/>
+                                <rect x="180" y="139" width="60" height="21" rx="3" fill="#eaf3de" stroke="#c0dd97" stroke-width="0.5"/>
+                                <text text-anchor="middle" x="210" y="152" class="fill-green-400 text-xs font-sans">3–5m</text>
+                                <text text-anchor="middle" x="210" y="173" class="fill-slate-400 text-xs font-sans">Open sky</text>
+                                <rect x="270" y="74" width="60" height="86" rx="3" fill="#faeeda" stroke="#fac775" stroke-width="0.5"/>
+                                <text text-anchor="middle" x="300" y="118" class="fill-amber-400 text-xs font-sans">8–20m</text>
+                                <text text-anchor="middle" x="300" y="173" class="fill-slate-400 text-xs font-sans">Urban canyon</text>
+                                <rect x="360" y="31" width="60" height="129" rx="3" fill="#fcebeb" stroke="#f7c1c1" stroke-width="0.5"/>
+                                <text text-anchor="middle" x="390" y="100" class="fill-red-400 text-xs font-sans">10–30m</text>
+                                <text text-anchor="middle" x="390" y="173" class="fill-slate-400 text-xs font-sans">Harare CBD</text>
+                                <rect x="450" y="157" width="60" height="3" rx="1" fill="#e6f1fb" stroke="#b5d4f4" stroke-width="0.5"/>
+                                <text text-anchor="middle" x="480" y="154" class="fill-blue-400 text-xs font-sans">&lt;0.1m</text>
+                                <text text-anchor="middle" x="480" y="173" class="fill-slate-400 text-xs font-sans">RTK GPS</text>
+                                <line x1="160" y1="149" x2="590" y2="149" stroke="#334155" stroke-width="1" stroke-dasharray="5 3"/>
+                                <text x="562" y="146" class="fill-slate-400 text-xs font-sans">2.5m bay</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div id="tab-solutions" class="panel hidden">
+                        <div class="space-y-4">
+                            <div class="border border-slate-700 rounded-lg p-4 bg-slate-800/60">
+                                <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-900/20 rounded-full px-3 py-1 mb-2">Phase 1 — MVP</span>
+                                <h3 class="text-lg font-bold text-slate-100 mb-1">Visual map alignment</h3>
+                                <p class="text-slate-400 text-sm mb-2">GPS sets the initial centroid; user drags corner markers onto satellite tiles. Polygon persists as manually-corrected coordinates, not raw GPS. HDOP badge shown live.</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="tech-badge">geolocator</span>
+                                    <span class="tech-badge">Google Maps SDK</span>
+                                    <span class="tech-badge">Firestore</span>
+                                    <span class="tech-badge">HDOP gate</span>
+                                </div>
+                            </div>
+                            <div class="border border-slate-700 rounded-lg p-4 bg-slate-800/60">
+                                <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-900/20 rounded-full px-3 py-1 mb-2">Phase 2 — V1.1</span>
+                                <h3 class="text-lg font-bold text-slate-100 mb-1">Computer vision line detection</h3>
+                                <p class="text-slate-400 text-sm mb-2">On-device TFLite model detects painted bay lines via camera. Centimetre-accurate polygon capture without GPS dependency. Firebase ML handles model distribution + A/B testing.</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="tech-badge">TFLite</span>
+                                    <span class="tech-badge">MobileNetV3-Small</span>
+                                    <span class="tech-badge">Firebase ML</span>
+                                    <span class="tech-badge">flutter_camera</span>
+                                </div>
+                            </div>
+                            <div class="border border-slate-700 rounded-lg p-4 bg-slate-800/60">
+                                <span class="inline-block text-xs font-semibold text-blue-400 bg-blue-900/20 rounded-full px-3 py-1 mb-2">Phase 3 — V2.0</span>
+                                <h3 class="text-lg font-bold text-slate-100 mb-1">RTK GPS integration</h3>
+                                <p class="text-slate-400 text-sm mb-2">External RTK modules (Emlid, u-blox F9P) via Bluetooth BLE. NTRIP correction streams over mobile data. Targets next-gen Snapdragon devices with dual-frequency GNSS.</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="tech-badge">RTK / NTRIP</span>
+                                    <span class="tech-badge">BLE</span>
+                                    <span class="tech-badge">dual-freq GNSS</span>
+                                    <span class="tech-badge">Snapdragon X75</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-skills" class="panel hidden">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Technical competencies</div>
+                        <div class="flex flex-col gap-3 mb-4" id="skill-list">
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">Flutter / Dart</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-blue-400 transition-all duration-700" style="width:88%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">C++ systems programming</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-green-400 transition-all duration-700" style="width:82%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">Firebase (Firestore, Auth, ML)</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-blue-400 transition-all duration-700" style="width:80%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">Product architecture & Lean Canvas</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-amber-400 transition-all duration-700" style="width:85%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">GPS / geolocation engineering</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-amber-400 transition-all duration-700" style="width:70%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">TFLite / on-device ML</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-green-400 transition-all duration-700" style="width:60%"></div></div></div>
+                            <div class="flex items-center gap-3"><span class="w-32 text-slate-200 text-sm">Payment API integration (EcoCash, InnBucks)</span><div class="flex-1 h-2 bg-slate-700 rounded"><div class="h-2 rounded bg-blue-400 transition-all duration-700" style="width:75%"></div></div></div>
+                        </div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mt-6 mb-2">Active projects</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-slate-700 rounded-lg p-4 bg-slate-800/60">
+                                <h3 class="text-base font-bold text-slate-100 mb-1">Ultimate Driver ZW</h3>
+                                <p class="text-xs text-slate-400">K53 learner driver prep. Flutter + Firebase. Freemium + EcoCash. SADC expansion target.</p>
+                            </div>
+                            <div class="border border-slate-700 rounded-lg p-4 bg-slate-800/60">
+                                <h3 class="text-base font-bold text-slate-100 mb-1">ParkSmart ZW</h3>
+                                <p class="text-xs text-slate-400">Urban parking enforcement assistant. CV line detection. RTK roadmap. Municipal-safe design.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-profile" class="panel hidden">
+                        <div class="border border-slate-700 rounded-2xl p-6 md:p-8 bg-slate-800/60 mb-5">
+                            <h3 class="text-xl md:text-2xl font-display font-bold text-primary-400 mb-2">Who Tatenda is as a developer</h3>
+                            <p class="text-base md:text-lg text-slate-200 leading-relaxed">He operates at the intersection of algorithmic depth and product thinking. In one session he reasons about bit-vector memory optimisation; in another, about legal liability frameworks and UX copy for disclaimers. Both are done with the same level of care.</p>
+                        </div>
+                        <div class="border border-slate-700 rounded-2xl p-6 md:p-8 bg-slate-800/60 mb-5">
+                            <h3 class="text-xl md:text-2xl font-display font-bold text-primary-400 mb-2">For technical hiring managers</h3>
+                            <ul class="list-disc pl-6 text-base md:text-lg text-slate-200 space-y-1">
+                                <li>Assign him to problems with both a hard technical constraint and a user-facing consequence — that's where he performs best.</li>
+                                <li>His C++ work (bit-vector UniqueInt, O(n) dedup with ~512MB coverage) signals he can reason about low-level systems and performance trade-offs.</li>
+                                <li>He researched urban canyon effects, HDOP, RTK, and TFLite independently — signals intellectual initiative and comfort with ambiguity.</li>
+                                <li>Give him ownership and context; he produces higher-quality work when he understands the 'why'.</li>
+                            </ul>
+                        </div>
+                        <div class="border border-slate-700 rounded-2xl p-6 md:p-8 bg-slate-800/60 mb-5">
+                            <h3 class="text-xl md:text-2xl font-display font-bold text-primary-400 mb-2">For product / engineering lead roles</h3>
+                            <ul class="list-disc pl-6 text-base md:text-lg text-slate-200 space-y-1">
+                                <li>He thinks in systems: risk registers, phased roadmaps, and technical architecture appear in the same document.</li>
+                                <li>Building real products in Zimbabwe is a forcing function for pragmatic, resource-conscious engineering.</li>
+                                <li>He documents assumptions and surfaces risks proactively — a habit that makes teams faster.</li>
+                            </ul>
+                        </div>
+                        <div class="border-l-4 border-primary-400 rounded-2xl p-6 md:p-8 bg-slate-800/60">
+                            <h3 class="text-xl md:text-2xl font-display font-bold text-primary-400 mb-2">Character note</h3>
+                            <p class="text-base md:text-lg text-slate-200 leading-relaxed">When given a genuinely hard problem — GPS sub-meter accuracy on consumer hardware — his instinct was to document it rigorously and design a phased solution, not to dismiss it or over-engineer it. Intellectual honesty combined with a bias toward action. That's the mark of a developer worth investing in.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                function switchTab(id) {
+                    document.querySelectorAll('#parksmart-gps-challenge .tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('#parksmart-gps-challenge .panel').forEach(p => p.classList.add('hidden'));
+                    const tabs = ['gps','solutions','skills','profile'];
+                    document.querySelectorAll('#parksmart-gps-challenge .tab')[tabs.indexOf(id)].classList.add('active');
+                    document.getElementById('tab-' + id).classList.remove('hidden');
+                }
+                </script>
+            </div>
+        </section>
 
     <section id="experience" class="relative py-24 px-6">
         <div class="max-w-7xl mx-auto relative z-10">
