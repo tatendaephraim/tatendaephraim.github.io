@@ -607,6 +607,84 @@
     .ps-note-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
     .ps-note-text { color: var(--text-secondary); font-size: 0.82rem; line-height: 1.7; }
 
+    /* ─── DESKTOP APPS (Microsoft Store) ─── */
+    .ms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .ms-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .ms-card:hover { border-color: var(--border-bright); transform: translateY(-4px); }
+    .ms-card-head {
+      padding: 1.75rem 1.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ms-icon {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .ms-card-titlewrap { flex: 1; min-width: 0; }
+    .ms-card-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; color: var(--text); }
+    .ms-card-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.2rem; }
+    .ms-store-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: var(--surface2);
+      border: 1px solid var(--border-bright);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .ms-store-badge i { color: #00adef; font-size: 0.8rem; }
+    .ms-card-body { padding: 1.5rem 1.75rem 1.75rem; display: flex; flex-direction: column; flex: 1; }
+    .ms-card-desc { color: var(--text-secondary); font-size: 0.83rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .ms-hw-callout {
+      display: flex; gap: 0.6rem; align-items: flex-start;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.875rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .ms-hw-callout i { color: var(--teal); font-size: 0.8rem; margin-top: 0.2rem; flex-shrink: 0; }
+    .ms-hw-callout p { font-size: 0.76rem; color: var(--text-secondary); line-height: 1.6; }
+    .ms-hw-callout strong { color: var(--text); }
+    .ms-feat-list { display: grid; gap: 0.55rem; margin-bottom: 1.5rem; }
+    .ms-feat-item { display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ms-feat-item i { font-size: 0.65rem; margin-top: 0.3rem; flex-shrink: 0; }
+    .ms-feat-item p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; }
+    .ms-card-foot { margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .ms-store-cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+      background: #000;
+      border: 1px solid var(--border-bright);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    }
+    .ms-store-cta i { font-size: 1.1rem; color: #00adef; }
+    .ms-store-cta:hover { transform: translateY(-2px); border-color: #00adef; background: #0a0a0a; }
+    .ms-runtime-note { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--text-dim); text-align: center; letter-spacing: 0.02em; }
+
     /* ─── SKILLS ─── */
     .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.25rem; }
     .skill-block { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; transition: border-color 0.2s; }
@@ -721,6 +799,7 @@
       .feat-project { grid-template-columns: 1fr; }
       .feat-img { min-height: 260px; }
       .proj-grid { grid-template-columns: 1fr 1fr; }
+      .ms-grid { grid-template-columns: 1fr 1fr; }
       .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
 
@@ -747,6 +826,7 @@
       .feat-img { min-height: 220px; }
 
       .proj-grid { grid-template-columns: 1fr; }
+      .ms-grid { grid-template-columns: 1fr; }
       .ps-stack-grid { grid-template-columns: 1fr 1fr; }
       .contact-wrap { padding: 2.5rem 1.5rem; }
       .sec-title { margin-bottom: 2rem; }
@@ -770,6 +850,7 @@
     <a href="#about" onclick="closeMob()">About</a>
     <a href="#experience" onclick="closeMob()">Experience</a>
     <a href="#projects" onclick="closeMob()">Projects</a>
+    <a href="#desktop-apps" onclick="closeMob()">Desktop Apps</a>
     <a href="#skills" onclick="closeMob()">Skills</a>
     <a href="#education" onclick="closeMob()">Education</a>
     <a href="#contact" onclick="closeMob()" style="color:var(--accent)">Contact</a>
@@ -783,6 +864,7 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#desktop-apps">Desktop Apps</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact" class="nav-cta">Let's Talk</a>
@@ -812,11 +894,11 @@
               <strong>Cloud &amp; Mobile Engineer</strong> — Carnegie Mellon University, Africa
             </p>
             <p class="hero-desc">
-              Building production-grade mobile applications and scalable cloud infrastructure. From Flutter apps live on the Play Store to Kubernetes-orchestrated pipelines on Azure — I ship things that work.
+              Building production-grade mobile applications and scalable cloud infrastructure. From Flutter apps live on the Play Store to native Windows desktop tools shipped on the Microsoft Store — I ship things that work.
             </p>
             <div class="hero-actions">
               <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right" style="font-size:.75em"></i></a>
-              <a href="https://drive.google.com/file/d/17tL5XMKnp0zg5k95p-FkKxMfOEHoKVvs/view?usp=sharing" target="_blank" class="btn-ghost"><i class="fas fa-file-arrow-down" style="font-size:.85em"></i> Download CV</a>
+              <a href="https://docs.google.com/document/d/1nW2JDCfNzXTVd7j_PdAZeavJ5jb0F1O6YeKDUbhQHrA/edit?usp=sharing" target="_blank" class="btn-ghost"><i class="fas fa-file-arrow-down" style="font-size:.85em"></i> Download CV</a>
             </div>
             <div class="hero-socials">
               <a href="https://github.com/tatendaephraim" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
@@ -851,7 +933,7 @@
             </div>
             <div class="float-stat bottom-left">
               <span class="stat-label">Apps Live</span>
-              <span class="stat-value">Play Store ↗</span>
+              <span class="stat-value">3 Stores ↗</span>
             </div>
           </div>
 
@@ -873,6 +955,7 @@
       <span class="ticker-item">Python <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Docker <span class="ticker-sep">·</span></span>
       <span class="ticker-item">C# .NET <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Jetpack Compose <span class="ticker-sep">·</span></span>
       <span class="ticker-item">TFLite <span class="ticker-sep">·</span></span>
       <!-- Duplicate -->
@@ -886,6 +969,7 @@
       <span class="ticker-item">Python <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Docker <span class="ticker-sep">·</span></span>
       <span class="ticker-item">C# .NET <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Jetpack Compose <span class="ticker-sep">·</span></span>
       <span class="ticker-item">TFLite <span class="ticker-sep">·</span></span>
     </div>
@@ -1092,6 +1176,104 @@
 
   <div class="divider"></div>
 
+  <!-- ─── DESKTOP APPS / MICROSOFT STORE ─── -->
+  <section id="desktop-apps" class="section">
+    <div class="container">
+      <p class="sec-eyebrow">Shipped Software</p>
+      <h2 class="sec-title" style="margin-bottom:.5rem;">Windows Desktop<br><span class="dim">Applications</span></h2>
+      <p style="color:var(--text-secondary);font-size:.93rem;max-width:560px;margin-bottom:2.5rem;line-height:1.7;">
+        Three native Windows applications published under Cresco Systems Labs, live on the Microsoft Store. Each one talks directly to the machine it runs on — reading battery and thermal sensors at the hardware level, driving GPU-accelerated codecs, or processing documents fully on-device — rather than treating Windows as a black box.
+      </p>
+
+      <div class="ms-grid">
+
+        <!-- Volt Guard -->
+        <div class="ms-card reveal">
+          <div class="ms-card-head">
+            <div class="ms-icon" style="color:var(--teal);background:rgba(45,221,180,0.1);border:1px solid rgba(45,221,180,0.2)"><i class="fas fa-bolt"></i></div>
+            <div class="ms-card-titlewrap">
+              <div class="ms-card-title">Volt Guard</div>
+              <div class="ms-card-sub">Power &amp; Thermal Optimizer</div>
+            </div>
+          </div>
+          <div class="ms-card-body">
+            <p class="ms-card-desc">A system-tray-resident power optimizer for Windows 10/11 that gives always-on visibility into every watt a laptop or desktop consumes, with one-click tools to claw battery life back.</p>
+            <div class="ms-hw-callout">
+              <i class="fas fa-microchip"></i>
+              <p><strong>Reads hardware directly.</strong> Battery voltage, charge current, and per-core CPU temperature are pulled straight from the sensor layer (with a WMI fallback) — not estimated from OS averages — and refreshed every 2 seconds.</p>
+            </div>
+            <div class="ms-feat-list">
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--teal)"></i><p>Per-process wattage profiler with one-click suspend / throttle of background drains</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--teal)"></i><p>Green Mode — six toggleable optimization layers (display, CPU governor, GPU rail, NVMe APST) for up to +3h 20m runtime</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--teal)"></i><p>Built on WinUI 3 + Windows App SDK with Mica material and live tray tooltips</p></div>
+            </div>
+            <div class="ms-card-foot">
+              <a href="https://apps.microsoft.com/detail/9MTPRKGHHRFV?hl=en-us&gl=US&ocid=pdpshare" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <span class="ms-runtime-note">Requires .NET Desktop Runtime (auto-installed)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Vault -->
+        <div class="ms-card reveal">
+          <div class="ms-card-head">
+            <div class="ms-icon" style="color:var(--accent);background:rgba(232,100,58,0.1);border:1px solid rgba(232,100,58,0.2)"><i class="fas fa-clapperboard"></i></div>
+            <div class="ms-card-titlewrap">
+              <div class="ms-card-title">StreamVault</div>
+              <div class="ms-card-sub">Video Downloader &amp; Converter</div>
+            </div>
+          </div>
+          <div class="ms-card-body">
+            <p class="ms-card-desc">An all-in-one media tool for Windows that downloads video and audio from thousands of sources, then converts and organizes everything offline from a single clean interface.</p>
+            <div class="ms-hw-callout">
+              <i class="fas fa-microchip"></i>
+              <p><strong>GPU-accelerated transcoding.</strong> Format conversion is offloaded to NVIDIA NVENC and Intel Quick Sync encoders on the host GPU, dramatically cutting conversion time versus CPU-only software encoding.</p>
+            </div>
+            <div class="ms-feat-list">
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--accent)"></i><p>144p–4K downloads, full playlist/channel grabs, resumable queued downloads</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--accent)"></i><p>Batch format conversion across MP4 / MKV / WEBM / MP3 / FLAC with bitrate &amp; codec control</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--accent)"></i><p>Built-in local media library with search, preview player, and one-tap re-conversion</p></div>
+            </div>
+            <div class="ms-card-foot">
+              <a href="https://apps.microsoft.com/detail/9NF4Q3JRWGWX?hl=en-us&gl=US&ocid=pdpshare" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <span class="ms-runtime-note">Requires .NET Desktop Runtime (auto-installed)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Md Forge -->
+        <div class="ms-card reveal">
+          <div class="ms-card-head">
+            <div class="ms-icon" style="color:var(--blue);background:rgba(91,141,245,0.1);border:1px solid rgba(91,141,245,0.2)"><i class="fas fa-file-shield"></i></div>
+            <div class="ms-card-titlewrap">
+              <div class="ms-card-title">Md Forge</div>
+              <div class="ms-card-sub">Offline Document → Markdown</div>
+            </div>
+          </div>
+          <div class="ms-card-body">
+            <p class="ms-card-desc">Converts PDFs, Word, PowerPoint, Excel, HTML, and images into clean, structured Markdown — built for developers feeding documents into AI pipelines, RAG systems, and vector databases.</p>
+            <div class="ms-hw-callout">
+              <i class="fas fa-microchip"></i>
+              <p><strong>100% on-device processing.</strong> Every conversion runs locally on the machine's CPU via Microsoft's open-source MarkItDown library — no file ever touches a network socket or cloud server.</p>
+            </div>
+            <div class="ms-feat-list">
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--blue)"></i><p>Strips layout noise (headers, footers, page numbers) that inflates RAG token counts</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--blue)"></i><p>Batch-converts entire folders in one pass, preserving tables, lists, and code blocks</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--blue)"></i><p>Zero telemetry, zero uploads — fully offline by design</p></div>
+            </div>
+            <div class="ms-card-foot">
+              <a href="https://apps.microsoft.com/store/detail/9NXBDXF8ZDTZ?cid=DevShareMCLPCS" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <span class="ms-runtime-note">Free · Offline · No account required</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ─── PARKSMART ─── -->
   <section id="parksmart" class="section">
     <div class="container">
@@ -1209,6 +1391,14 @@
             <span class="chip">Flutter</span><span class="chip">Kotlin</span><span class="chip">Dart</span>
             <span class="chip">Java</span><span class="chip">C#</span><span class="chip">Python</span>
             <span class="chip">C++</span><span class="chip">.NET Core</span><span class="chip">Jetpack Compose</span>
+          </div>
+        </div>
+        <div class="skill-block reveal">
+          <div class="skill-icon-wrap" style="color:var(--gold);border-color:rgba(201,162,39,0.2);background:rgba(201,162,39,0.08)"><i class="fas fa-desktop"></i></div>
+          <div class="skill-block-title">Windows Desktop</div>
+          <div class="chips">
+            <span class="chip">WinUI 3</span><span class="chip">.NET MAUI</span><span class="chip">Windows App SDK</span>
+            <span class="chip">WMI / Hardware Sensors</span><span class="chip">NVENC / Quick Sync</span><span class="chip">MSIX Packaging</span>
           </div>
         </div>
         <div class="skill-block reveal">
