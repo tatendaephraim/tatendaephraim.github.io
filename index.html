@@ -666,8 +666,8 @@
     .ms-feat-list { display: grid; gap: 0.55rem; margin-bottom: 1.5rem; }
     .ms-feat-item { display: flex; gap: 0.6rem; align-items: flex-start; }
     .ms-feat-item i { font-size: 0.65rem; margin-top: 0.3rem; flex-shrink: 0; }
-    .ms-feat-item p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; }
-    .ms-card-foot { margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .ms-feat-item p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; }    
+    .ms-card-foot { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
     .ms-store-cta {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
       background: #000;
@@ -933,7 +933,7 @@
             </div>
             <div class="float-stat bottom-left">
               <span class="stat-label">Apps Live</span>
-              <span class="stat-value">3 Stores ↗</span>
+              <span class="stat-value">4 Apps Live ↗</span>
             </div>
           </div>
 
@@ -956,6 +956,7 @@
       <span class="ticker-item">Docker <span class="ticker-sep">·</span></span>
       <span class="ticker-item">C# .NET <span class="ticker-sep">·</span></span>
       <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Jetpack Compose <span class="ticker-sep">·</span></span>
       <span class="ticker-item">TFLite <span class="ticker-sep">·</span></span>
       <!-- Duplicate -->
@@ -969,6 +970,7 @@
       <span class="ticker-item">Python <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Docker <span class="ticker-sep">·</span></span>
       <span class="ticker-item">C# .NET <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
       <span class="ticker-item">WinUI 3 <span class="ticker-sep">·</span></span>
       <span class="ticker-item">Jetpack Compose <span class="ticker-sep">·</span></span>
       <span class="ticker-item">TFLite <span class="ticker-sep">·</span></span>
@@ -1187,8 +1189,43 @@
 
       <div class="ms-grid">
 
+        <!-- Prompt Forge -->
+        <div class="ms-card reveal" style="margin-bottom:1.25rem; background: var(--surface3); border-color: var(--gold);">
+          <div class="ms-card-head">
+            <div class="ms-icon" style="color:var(--gold);background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.2)"><i class="fas fa-brain"></i></div>
+            <div class="ms-card-titlewrap">
+              <div class="ms-card-title">Prompt Forge</div>
+              <div class="ms-card-sub">AI Prompt Engineering Toolkit</div>
+            </div>
+          </div>
+          <div class="ms-card-body">
+            <p class="ms-card-desc">An AI prompt engineering toolkit for Windows that helps you craft, test, and refine prompts for large language models (LLMs) like GPT-4, Claude, and Gemini.</p>
+            <div class="ms-hw-callout">
+              <i class="fas fa-microchip"></i>
+              <p><strong>Local AI Playground.</strong> Experiment with different LLMs and parameters directly within the app, ensuring privacy and rapid iteration without constant API calls.</p>
+            </div>
+            <div class="ms-feat-list">
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--gold)"></i><p>Powerful prompt editor with syntax highlighting and version control</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--gold)"></i><p>Organize prompts into collections and easily export/import them</p></div>
+              <div class="ms-feat-item"><i class="fas fa-circle" style="color:var(--gold)"></i><p>Supports popular LLMs: GPT-4, Claude, Gemini, and more</p></div>
+            </div>
+            <div class="ms-card-foot">
+              <a href="https://apps.microsoft.com/detail/9NR8QLWGWM1X?hl=en-us&gl=US&ocid=pdpshare" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <ms-store-badge
+                productid="9NR8QLWGWM1X"
+                productname="Prompt Forge"
+                window-mode="direct"
+                theme="auto"
+                size="medium"                language="en-us"
+                animation="on">
+              </ms-store-badge>
+              <span class="ms-runtime-note">Free · Offline · No account required</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Volt Guard -->
-        <div class="ms-card reveal">
+        <div class="ms-card reveal" style="margin-bottom:1.25rem;">
           <div class="ms-card-head">
             <div class="ms-icon" style="color:var(--teal);background:rgba(45,221,180,0.1);border:1px solid rgba(45,221,180,0.2)"><i class="fas fa-bolt"></i></div>
             <div class="ms-card-titlewrap">
@@ -1197,7 +1234,7 @@
             </div>
           </div>
           <div class="ms-card-body">
-            <p class="ms-card-desc">A system-tray-resident power optimizer for Windows 10/11 that gives always-on visibility into every watt a laptop or desktop consumes, with one-click tools to claw battery life back.</p>
+            <p class="ms-card-desc">A system-tray-resident power optimizer for Windows 10/11 that gives always-on visibility into every watt a laptop or desktop consumes, with one-click tools to claw back battery life.</p>
             <div class="ms-hw-callout">
               <i class="fas fa-microchip"></i>
               <p><strong>Reads hardware directly.</strong> Battery voltage, charge current, and per-core CPU temperature are pulled straight from the sensor layer (with a WMI fallback) — not estimated from OS averages — and refreshed every 2 seconds.</p>
@@ -1209,13 +1246,21 @@
             </div>
             <div class="ms-card-foot">
               <a href="https://apps.microsoft.com/detail/9MTPRKGHHRFV?hl=en-us&gl=US&ocid=pdpshare" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <ms-store-badge
+                productid="9mtprkghhrfv"
+                productname="Volt Guard"
+                window-mode="direct"
+                theme="auto"
+                size="medium"                language="en-us"
+                animation="on">
+              </ms-store-badge>
               <span class="ms-runtime-note">Requires .NET Desktop Runtime (auto-installed)</span>
             </div>
           </div>
         </div>
 
         <!-- Stream Vault -->
-        <div class="ms-card reveal">
+        <div class="ms-card reveal" style="margin-bottom:1.25rem;">
           <div class="ms-card-head">
             <div class="ms-icon" style="color:var(--accent);background:rgba(232,100,58,0.1);border:1px solid rgba(232,100,58,0.2)"><i class="fas fa-clapperboard"></i></div>
             <div class="ms-card-titlewrap">
@@ -1224,7 +1269,7 @@
             </div>
           </div>
           <div class="ms-card-body">
-            <p class="ms-card-desc">An all-in-one media tool for Windows that downloads video and audio from thousands of sources, then converts and organizes everything offline from a single clean interface.</p>
+            <p class="ms-card-desc">An all-in-one media tool for Windows that downloads video and audio from thousands of sources, then converts and organizes everything offline from a single, clean interface.</p>
             <div class="ms-hw-callout">
               <i class="fas fa-microchip"></i>
               <p><strong>GPU-accelerated transcoding.</strong> Format conversion is offloaded to NVIDIA NVENC and Intel Quick Sync encoders on the host GPU, dramatically cutting conversion time versus CPU-only software encoding.</p>
@@ -1236,13 +1281,21 @@
             </div>
             <div class="ms-card-foot">
               <a href="https://apps.microsoft.com/detail/9NF4Q3JRWGWX?hl=en-us&gl=US&ocid=pdpshare" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <ms-store-badge
+                productid="9nf4q3jrwgwx"
+                productname="Stream Vault"
+                window-mode="direct"
+                theme="auto"
+                size="medium"                language="en-us"
+                animation="on">
+              </ms-store-badge>
               <span class="ms-runtime-note">Requires .NET Desktop Runtime (auto-installed)</span>
             </div>
           </div>
         </div>
 
         <!-- Md Forge -->
-        <div class="ms-card reveal">
+        <div class="ms-card reveal" style="margin-bottom:1.25rem;">
           <div class="ms-card-head">
             <div class="ms-icon" style="color:var(--blue);background:rgba(91,141,245,0.1);border:1px solid rgba(91,141,245,0.2)"><i class="fas fa-file-shield"></i></div>
             <div class="ms-card-titlewrap">
@@ -1263,6 +1316,8 @@
             </div>
             <div class="ms-card-foot">
               <a href="https://apps.microsoft.com/store/detail/9NXBDXF8ZDTZ?cid=DevShareMCLPCS" target="_blank" class="ms-store-cta"><i class="fab fa-windows"></i> Get it from Microsoft Store</a>
+              <ms-store-badge productid="9nxbdxf8zdtz" productname="Md Forge" window-mode="direct" theme="auto" size="medium" language="en-us" animation="on">
+              </ms-store-badge>
               <span class="ms-runtime-note">Free · Offline · No account required</span>
             </div>
           </div>
@@ -1274,119 +1329,16 @@
 
   <div class="divider"></div>
 
-  <!-- ─── PARKSMART ─── -->
-  <section id="parksmart" class="section">
-    <div class="container">
-      <p class="sec-eyebrow">Deep Dive</p>
-      <h2 class="sec-title" style="margin-bottom:.5rem;">ParkSmart ZW</h2>
-      <p style="color:var(--text-secondary);font-size:.93rem;max-width:520px;margin-bottom:2rem;line-height:1.7;">Urban parking enforcement assistant — engineering GPS accuracy on consumer hardware in Harare's CBD.</p>
-
-      <div class="ps-card reveal">
-        <div class="ps-tabs">
-          <button class="ps-tab active" onclick="psTab('gps',this)">GPS Challenge</button>
-          <button class="ps-tab" onclick="psTab('solutions',this)">Solutions</button>
-          <button class="ps-tab" onclick="psTab('stack',this)">Tech Stack</button>
-          <button class="ps-tab" onclick="psTab('profile',this)">Employer Brief</button>
-        </div>
-
-        <div id="ps-gps" class="ps-panel active">
-          <div class="ps-table-row header">
-            <span>Risk</span><span>Severity</span><span>Mitigation</span>
-          </div>
-          <div class="ps-table-row">
-            <span class="ps-row-text">False bay boundary confidence</span>
-            <span class="badge-hi">High</span>
-            <span class="ps-row-note">Manual alignment step before polygon save</span>
-          </div>
-          <div class="ps-table-row">
-            <span class="ps-row-text">User towed despite app confirmation</span>
-            <span class="badge-hi">High</span>
-            <span class="ps-row-note">Prominent disclaimer + ToS waiver</span>
-          </div>
-          <div class="ps-table-row">
-            <span class="ps-row-text">GPS drift during active session</span>
-            <span class="badge-med">Medium</span>
-            <span class="ps-row-note">Poll every 10s; alert on &gt;3m drift</span>
-          </div>
-          <div class="ps-table-row">
-            <span class="ps-row-text">Poor accuracy in parking structures</span>
-            <span class="badge-med">Medium</span>
-            <span class="ps-row-note">HDOP &gt; 3 → disable polygon features</span>
-          </div>
-        </div>
-
-        <div id="ps-solutions" class="ps-panel">
-          <div class="ps-phase">
-            <span class="tag tag-teal" style="margin-bottom:.75rem;display:inline-block">Phase 1 — MVP</span>
-            <div class="ps-phase-title">Visual map alignment</div>
-            <div class="ps-phase-desc">GPS sets initial centroid; user drags corner markers onto satellite tiles. Polygon persists as manually-corrected coordinates. HDOP badge shown live.</div>
-            <div class="tags"><span class="tag">geolocator</span><span class="tag">Google Maps SDK</span><span class="tag">Firestore</span><span class="tag">HDOP gate</span></div>
-          </div>
-          <div class="ps-phase">
-            <span class="tag tag-accent" style="margin-bottom:.75rem;display:inline-block">Phase 2 — V1.1</span>
-            <div class="ps-phase-title">Computer vision line detection</div>
-            <div class="ps-phase-desc">On-device TFLite model detects painted bay lines via camera. Centimetre-accurate capture without GPS dependency. Firebase ML handles model distribution + A/B testing.</div>
-            <div class="tags"><span class="tag">TFLite</span><span class="tag">MobileNetV3</span><span class="tag">Firebase ML</span></div>
-          </div>
-          <div class="ps-phase">
-            <span class="tag tag-blue" style="margin-bottom:.75rem;display:inline-block">Phase 3 — V2.0</span>
-            <div class="ps-phase-title">RTK GPS integration</div>
-            <div class="ps-phase-desc">External RTK modules (Emlid, u-blox F9P) via BLE. NTRIP correction streams over mobile data. Targets dual-frequency GNSS on Snapdragon X75 devices.</div>
-            <div class="tags"><span class="tag">RTK/NTRIP</span><span class="tag">BLE</span><span class="tag">dual-freq GNSS</span></div>
-          </div>
-        </div>
-
-        <div id="ps-stack" class="ps-panel">
-          <div class="ps-stack-grid">
-            <div class="ps-stack-item">
-              <span class="ps-stack-label">Primary</span>
-              <span class="ps-stack-name">Flutter / Dart</span>
-              <div class="ps-bar"><div class="ps-bar-fill" style="width:88%;background:var(--blue)"></div></div>
-            </div>
-            <div class="ps-stack-item">
-              <span class="ps-stack-label">Backend</span>
-              <span class="ps-stack-name">Firebase Suite</span>
-              <div class="ps-bar"><div class="ps-bar-fill" style="width:80%;background:var(--accent)"></div></div>
-            </div>
-            <div class="ps-stack-item">
-              <span class="ps-stack-label">Payments</span>
-              <span class="ps-stack-name">EcoCash / InnBucks</span>
-              <div class="ps-bar"><div class="ps-bar-fill" style="width:75%;background:var(--teal)"></div></div>
-            </div>
-            <div class="ps-stack-item">
-              <span class="ps-stack-label">ML / Vision</span>
-              <span class="ps-stack-name">TFLite / MobileNetV3</span>
-              <div class="ps-bar"><div class="ps-bar-fill" style="width:60%;background:var(--gold)"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div id="ps-profile" class="ps-panel">
-          <div class="ps-note" style="border-left:2px solid var(--accent);">
-            <div class="ps-note-title" style="color:var(--accent)">For technical hiring managers</div>
-            <div class="ps-note-text">Assign him to problems with both a hard technical constraint and a user-facing consequence — that's where he performs best. His C++ work (bit-vector UniqueInt, O(n) dedup with ~512MB coverage) signals low-level systems and performance reasoning.</div>
-          </div>
-          <div class="ps-note" style="border-left:2px solid var(--teal);">
-            <div class="ps-note-title" style="color:var(--teal)">Character note</div>
-            <div class="ps-note-text">When given a genuinely hard problem — GPS sub-meter accuracy on consumer hardware — his instinct was to document it rigorously and design a phased solution, not to dismiss it or over-engineer it. Intellectual honesty combined with a bias toward action.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
   <!-- ─── SKILLS ─── -->
   <section id="skills" class="section">
     <div class="container">
       <p class="sec-eyebrow">Competencies</p>
       <h2 class="sec-title">Technical<br><span class="dim">Arsenal</span></h2>
-
+      
       <div class="skill-grid">
         <div class="skill-block reveal">
           <div class="skill-icon-wrap" style="color:var(--accent);border-color:rgba(232,100,58,0.2);background:rgba(232,100,58,0.08)"><i class="fas fa-mobile-screen"></i></div>
-          <div class="skill-block-title">Mobile &amp; Languages</div>
+          <div class="skill-block-title">Mobile &amp; Languages</div>          
           <div class="chips">
             <span class="chip">Flutter</span><span class="chip">Kotlin</span><span class="chip">Dart</span>
             <span class="chip">Java</span><span class="chip">C#</span><span class="chip">Python</span>
@@ -1528,6 +1480,8 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+
   <script>
     // ─ Mobile nav ─
     const mobNav = document.getElementById('mob-nav');
@@ -1535,7 +1489,7 @@
     document.getElementById('mob-close').addEventListener('click', () => mobNav.classList.remove('open'));
     function closeMob() { mobNav.classList.remove('open'); }
 
-    // ─ Back to top ─
+    // Back to top
     const btt = document.getElementById('btt');
     window.addEventListener('scroll', () => {
       btt.classList.toggle('visible', window.scrollY > 400);
