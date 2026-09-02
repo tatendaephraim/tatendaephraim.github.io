@@ -1,7 +1,26 @@
 {
   "permissions": {
     "allow": [
-      "Bash(chromium-cli --help)"
+      "Bash(chromium-cli --help)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0.0.0 Safari/537.36' https://play.google.com/store/apps/details?id=com.crescosystems.streamsave -o /c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad/streamsave.html -w '%{http_code}\\\\n')",
+      "Bash(grep -o '\"description\":\"[^\"]\\\\{20,600\\\\}\"' /c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad/streamsave.html)",
+      "Bash(grep -o '\"description\":\"[^\"]\\\\{50,2000\\\\}\"' /c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad/streamsave.html)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0.0.0 Safari/537.36' 'https://apps.microsoft.com/detail/9N2S5G3SH9J1?hl=en-us&gl=US' -o /c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad/rapportly.html -w '%{http_code}\\\\n')",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/124.0.0.0 Safari/537.36' 'https://apps.microsoft.com/detail/9N2S5G3SH9J1?hl=en-us&gl=US' -o /c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad/rapportly.html -w '%{http_code}\\\\n')",
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(python3 -)",
+      "Bash(SCRATCH=\"/c/Users/taten/AppData/Local/Temp/claude/c--stocker-ephraim-tailwind-portfolio/1b343b79-cbe9-440c-80c2-bea19799d581/scratchpad\" *)",
+      "Bash(git -C c:/stocker/ephraim-tailwind-portfolio show HEAD:index.html)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh api *)",
+      "Bash(curl -s \"https://tatendaephraim.github.io/\" -o /dev/null -w \"http_code:%{http_code} size:%{size_download}\\\\n\")",
+      "Bash(curl -s \"https://tatendaephraim.github.io/\")",
+      "Bash(curl -sI \"https://tatendaephraim.github.io/\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\taten\\AppData\\Local\\Temp\\claude\\c--stocker-ephraim-tailwind-portfolio\\1b343b79-cbe9-440c-80c2-bea19799d581\\scratchpad"
     ]
   }
 }
