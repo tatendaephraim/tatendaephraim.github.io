@@ -816,6 +816,93 @@
     .contact-desc { color: var(--text-secondary); font-size: 0.95rem; max-width: 480px; margin: 0 auto 2.5rem; line-height: 1.75; position: relative; z-index: 1; }
     .contact-btns { display: flex; justify-content: center; gap: 0.875rem; flex-wrap: wrap; position: relative; z-index: 1; }
 
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+      text-align: left;
+      position: relative;
+      z-index: 1;
+    }
+    .contact-grid .contact-desc { margin: 0 0 2.25rem; max-width: 520px; }
+    .contact-grid .contact-btns { justify-content: flex-start; }
+
+    .qr-showcase-card {
+      background: linear-gradient(155deg, rgba(255,255,255,0.04) 0%, rgba(15,15,26,0.92) 100%);
+      border: 1px solid var(--border-bright);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      max-width: 300px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .qr-showcase-card::before {
+      content: '';
+      position: absolute; inset: -1px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(232,100,58,0.35), transparent 50%, rgba(45,221,180,0.25));
+      z-index: 0;
+      pointer-events: none;
+    }
+    .qr-showcase-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(45,221,180,0.4);
+      box-shadow: 0 28px 70px rgba(0,0,0,0.6), 0 0 30px rgba(45,221,180,0.08);
+    }
+    .qr-card-inner { position: relative; z-index: 1; }
+    .qr-badge {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      color: var(--teal);
+      background: var(--teal-dim);
+      border: 1px solid rgba(45,221,180,0.22);
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .qr-frame {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 0.75rem;
+      width: 195px;
+      height: 195px;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease;
+    }
+    .qr-showcase-card:hover .qr-frame { transform: scale(1.03); }
+    .qr-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .qr-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+    .qr-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+
     /* Footer */
     .footer { padding: 3rem 0 1.5rem; text-align: center; }
     .footer p { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--text-dim); letter-spacing: 0.08em; }
@@ -868,6 +955,9 @@
       .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .stats-bento { grid-template-columns: 1fr 1fr; }
       .stat-tile.tile-hero { grid-column: 1 / -1; }
+      .contact-grid { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+      .contact-grid .contact-desc { margin: 0 auto 2rem; }
+      .contact-grid .contact-btns { justify-content: center; }
     }
 
     @media (max-width: 768px) {
@@ -967,6 +1057,7 @@
             <div class="hero-actions">
               <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right" style="font-size:.75em"></i></a>
               <a href="https://docs.google.com/document/d/1nW2JDCfNzXTVd7j_PdAZeavJ5jb0F1O6YeKDUbhQHrA/edit?usp=sharing" target="_blank" class="btn-ghost"><i class="fas fa-file-arrow-down" style="font-size:.85em"></i> Download CV</a>
+              <a href="#portfolio-qr" class="btn-ghost"><i class="fas fa-qrcode" style="font-size:.85em;color:var(--teal)"></i> Scan QR</a>
             </div>
             <div class="hero-socials">
               <a href="https://github.com/tatendaephraim" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
@@ -1001,7 +1092,7 @@
             </div>
             <div class="float-stat bottom-left">
               <span class="stat-label">Apps Live</span>
-              <span class="stat-value">5+ Apps Live ↗</span>
+              <span class="stat-value">7+ Apps Live ↗</span>
             </div>
           </div>
 
@@ -1061,7 +1152,7 @@
         </div>
         <div class="stat-tile reveal">
           <i class="fas fa-mobile-screen-button stat-tile-icon" style="color:var(--teal)"></i>
-          <div class="stat-tile-num" style="color:var(--teal)">5+</div>
+          <div class="stat-tile-num" style="color:var(--teal)">7+</div>
           <div class="stat-tile-label">Mobile &amp; production apps shipped</div>
         </div>
         <div class="stat-tile reveal">
@@ -1222,7 +1313,7 @@
       </div>
 
       <!-- Driver Ultimate -->
-      <div class="feat-project reveal" style="margin-bottom:3rem;">
+      <div class="feat-project reveal" style="margin-bottom:1.25rem;">
         <div class="feat-img" style="order:2">
           <img src="./assets/images/driver-ultimate-feature-graphic_1.png" alt="Driver Ultimate Zimbabwe"
             onerror="this.parentElement.style.background='linear-gradient(135deg,#1f0a0a,#100505)';this.style.display='none'" />
@@ -1242,6 +1333,65 @@
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.crescosystems.driverultimate" target="_blank" class="btn-primary" style="width:fit-content;">
             <i class="fab fa-google-play"></i> Download Free
+          </a>
+        </div>
+      </div>
+
+      <!-- K53 Ultimate South Africa -->
+      <div class="feat-project reveal" style="margin-bottom:1.25rem;">
+        <div class="feat-img">
+          <img src="./assets/images/k53_Feature_Graphic.jpeg" alt="K53 Ultimate South Africa"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#09152b,#050b16)';this.style.display='none'" />
+          <div class="feat-img-badge" style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+            <span class="tag tag-gold" style="background:rgba(8,8,16,0.85);backdrop-filter:blur(8px);">Ready for Production</span>
+            <span class="tag tag-teal" style="background:rgba(8,8,16,0.85);backdrop-filter:blur(8px);">Tester Access Live</span>
+          </div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-eyebrow" style="color:var(--gold)">Featured · Android App · South Africa</div>
+          <div class="feat-title">K53 Ultimate<br>South Africa</div>
+          <div class="feat-desc">Comprehensive, privacy-first South African K53 Learner's Licence study companion for Code 8, Code 10, Code 14, and motorcycles — 100% offline with zero data costs or accounts. Features the complete official K53 syllabus (road signs, traffic laws &amp; vehicle controls), an adaptive quiz engine that targets weak spots, timed 64-question mock exams enforcing official traffic department per-section pass marks, Deep Focus mode with XP streaks, and pass-readiness analytics.</div>
+          <div class="tags">
+            <span class="tag tag-gold">100% Offline</span>
+            <span class="tag tag-teal">Adaptive Quiz Engine</span>
+            <span class="tag">64-Q Official Mock Exams</span>
+            <span class="tag">Code 8 · 10 · 14 &amp; Motorcycle</span>
+            <span class="tag">Deep Focus &amp; XP Streaks</span>
+            <span class="tag">Privacy-First</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+            <span class="btn-primary" style="width:fit-content;background:linear-gradient(135deg,var(--gold),#d97706);color:#000;font-weight:700;cursor:default;">
+              <i class="fab fa-google-play"></i> Play Store Link Coming Soon
+            </span>
+            <a href="#contact" class="btn-ghost" style="width:fit-content;border-color:rgba(45,221,180,0.3);color:var(--teal);">
+              <i class="fas fa-vial"></i> Available for Testers · Request Access
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KJV Bible -->
+      <div class="feat-project reveal" style="margin-bottom:1.25rem;">
+        <div class="feat-img" style="order:2">
+          <img src="./assets/images/kjvbible.png" alt="KJV Bible — Holy Bible Study Suite"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#1a160a,#0c0f1d)';this.style.display='none'" />
+          <div class="feat-img-badge"><span class="tag tag-teal" style="background:rgba(8,8,16,0.85);backdrop-filter:blur(8px);">Live on Play Store</span></div>
+        </div>
+        <div class="feat-body" style="order:1">
+          <div class="feat-eyebrow" style="color:var(--teal)">Featured · Android App · Study Suite</div>
+          <div class="feat-title">KJV Bible<br><span style="font-size:0.62em;font-weight:500;color:var(--text-secondary);">Holy Bible Study Suite</span></div>
+          <div class="feat-desc">Peaceful, 100% offline-first scriptural study suite offering 32 full Bible translations across 9 world languages (417,000+ verses) with instant search and side-by-side parallel reading. Powered by an on-device ML Kit AI Sacred Voice audio reader (4 vocal profiles), 3 sacred word games (Word Search, Crosswords &amp; Quiz), an interactive Biblical Atlas &amp; 4,000-year timeline, 9 devotional reading plans, and custom verse art creation — completely private with zero cloud tracking.</div>
+          <div class="tags">
+            <span class="tag tag-teal">32 Offline Translations</span>
+            <span class="tag tag-gold">ML Kit AI Audio Reader</span>
+            <span class="tag">9 World Languages</span>
+            <span class="tag">Parallel Reading</span>
+            <span class="tag">Biblical Atlas &amp; Timeline</span>
+            <span class="tag">Sacred Word Games</span>
+            <span class="tag">100% Private &amp; Offline</span>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.crescosystems.biblewatch&pcampaignid=web_share" target="_blank" class="btn-primary" style="width:fit-content;background:linear-gradient(135deg,var(--teal),#16a34a);color:#000;font-weight:700;">
+            <i class="fab fa-google-play"></i> View on Play Store
           </a>
         </div>
       </div>
@@ -1680,12 +1830,28 @@
   <section id="contact" class="section">
     <div class="container">
       <div class="contact-wrap reveal">
-        <p class="sec-eyebrow" style="justify-content:center;margin-bottom:1rem;">Get In Touch</p>
-        <div class="contact-title">Let's build<br>something great.</div>
-        <p class="contact-desc">Available for roles, freelance projects, and conversations about mobile, cloud, and what's possible with modern engineering.</p>
-        <div class="contact-btns">
-          <a href="mailto:tchipwan@andrew.cmu.edu" class="btn-primary"><i class="fas fa-envelope"></i> tchipwan@andrew.cmu.edu</a>
-          <a href="https://www.linkedin.com/in/tatenda-ephraim-chipwanya-bba050146/" target="_blank" class="btn-ghost"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <div class="contact-grid">
+          <div>
+            <p class="sec-eyebrow" style="margin-bottom:1rem;">Get In Touch</p>
+            <div class="contact-title">Let's build<br>something great.</div>
+            <p class="contact-desc">Available for roles, freelance projects, app testing access, and conversations about mobile, cloud, and what's possible with modern engineering.</p>
+            <div class="contact-btns">
+              <a href="mailto:tchipwan@andrew.cmu.edu" class="btn-primary"><i class="fas fa-envelope"></i> tchipwan@andrew.cmu.edu</a>
+              <a href="https://www.linkedin.com/in/tatenda-ephraim-chipwanya-bba050146/" target="_blank" class="btn-ghost"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              <a href="https://github.com/tatendaephraim" target="_blank" class="btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+
+          <div id="portfolio-qr" class="qr-showcase-card">
+            <div class="qr-card-inner">
+              <span class="qr-badge"><i class="fas fa-qrcode"></i> Mobile Portfolio</span>
+              <div class="qr-frame">
+                <img src="./assets/images/ephraimQR_portfolio.png" alt="Scan QR Code to open Tatenda Ephraim Portfolio" loading="lazy" />
+              </div>
+              <div class="qr-title">Scan &amp; Take With You</div>
+              <p class="qr-sub">Point your phone camera to open this portfolio &amp; live store apps on mobile</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
